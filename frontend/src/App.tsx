@@ -1,9 +1,12 @@
+import BoardersProvider from './contexts/BoardersProvider';
 import AppRouter from './routes/AppRouter';
 
 function App() {
   return (
     <>
-      <AppRouter />
+      <BoardersProvider>
+        <AppRouter />
+      </BoardersProvider>
     </>
   );
 }
