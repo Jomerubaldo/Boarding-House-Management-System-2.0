@@ -25,8 +25,8 @@ const Boarders = () => {
   return (
     <div className="bg-[#e5e7eb] w-full h-screen">
       <div className="flex justify-between p-4">
-        <h2 className="text-3xl pb-5 font-bold">Boarders</h2>
-        <div className="pr-7">
+        <h2 className="text-3xl pb-3">Boarders</h2>
+        <div className="pr-8">
           <AddBoarderModal />
         </div>
       </div>

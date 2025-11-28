@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useBoarders } from '../../contexts/BoardersProvider';
 
-
 const AddBoarderModal = () => {
   const {
     showModal,
@@ -27,7 +26,7 @@ const AddBoarderModal = () => {
           // Backdrop
           <motion.div
             key="modal-backdrop"
-            className="fixed inset-0 bg-black/50 flex ju  stify-center items-center z-1000"
+            className="fixed inset-0 bg-black/50 flex justify-center items-center z-1000"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
