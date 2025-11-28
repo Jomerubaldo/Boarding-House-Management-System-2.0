@@ -73,8 +73,6 @@ const AddBoarderModal = () => {
                   value={formData.room}
                   onChange={handleChange}
                   required
-                  min="1"
-                  max="7"
                   className="w-full mb-4 p-2 border border-gray-300 rounded"
                 />
 

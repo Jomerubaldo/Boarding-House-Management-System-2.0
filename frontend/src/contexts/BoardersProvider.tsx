@@ -98,7 +98,9 @@ const BoardersProvider: FC<BoardersProviderProps> = ({ children }) => {
     }
 
     // Check kung input field is 7 above
-    if (Number(formData.room) > 7) {
+    const formRoomNumber = Number(formData.room);
+
+    if (formRoomNumber > 7) {
       Swal.fire({
         title: 'Number must be below 7!',
         icon: 'warning',
@@ -191,7 +193,9 @@ const BoardersProvider: FC<BoardersProviderProps> = ({ children }) => {
       Check kung input field is 7 above
       dapat laging false para hindi gumana yung modal alert
       */
-    if (editData.room && Number(editData.room) > 7) {
+    const roomNumber = Number(editData.room);
+
+    if (roomNumber > 7) {
       Swal.fire({
         title: 'Number must be below 7!',
         icon: 'warning',
