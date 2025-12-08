@@ -13,6 +13,7 @@
     "@ionic/react": "^8.7.10",
     "@tailwindcss/vite": "^4.1.17",
     "ionicons": "^8.0.13",
+    "lucide-react": "^0.556.0",
     "motion": "^12.23.24",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

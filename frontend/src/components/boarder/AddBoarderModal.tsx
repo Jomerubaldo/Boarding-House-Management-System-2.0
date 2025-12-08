@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useBoarders } from '../../contexts/BoardersProvider';
+import { CirclePlus, CircleX, Save } from 'lucide-react';
 
 const AddBoarderModal = () => {
   const {
@@ -13,11 +14,8 @@ const AddBoarderModal = () => {
 
   return (
     <div className="mr-8">
-      <button
-        onClick={openModal}
-        className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
-      >
-        Add Boarder
+      <button onClick={openModal}>
+        <CirclePlus stroke="blue" size={40} />
       </button>
 
       {/* Framer Motion to animate open and close modal */}
@@ -81,7 +79,7 @@ const AddBoarderModal = () => {
                     type="submit"
                     className="bg-green-500 text-white py-2 px-6 rounded hover:bg-green-600"
                   >
-                    Save
+                    <Save />
                   </button>
 
                   <button
@@ -89,7 +87,7 @@ const AddBoarderModal = () => {
                     className="bg-red-500 text-white py-2 px-6 rounded hover:bg-red-600"
                     onClick={closeModal}
                   >
-                    Cancel
+                    <CircleX />
                   </button>
                 </div>
               </form>

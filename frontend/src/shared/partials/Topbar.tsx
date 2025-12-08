@@ -3,7 +3,7 @@ import { personCircle, menu } from 'ionicons/icons';
 
 const Topbar = () => {
   return (
-    <div className="bg-white w-full h-14 border-b border-gray-300 flex justify-between items-center pr-5">
+    <div className="bg-white w-full h-24 border-b border-gray-300 flex justify-between items-center pr-5">
       <button className="pl-5">
         <IonIcon icon={menu} className="text-4xl" />
       </button>

@@ -1,3 +1,5 @@
+import { IonIcon } from '@ionic/react';
+import { personCircle } from 'ionicons/icons';
 import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
@@ -13,8 +15,14 @@ const Sidebar = () => {
 
   return (
     <div className="bg-[#343a40] w-[250px] h-screen">
-      <div className="text-center font-light pt-3 pb-[15px]">
-        <h2 className="text-[19px] text-white">Admin</h2>
+      <div className="text-center font-light">
+        <div className="flex justify-start items-center">
+          <IonIcon icon={personCircle} className="text-8xl" />
+          <div className="text-left text-white">
+            <h1 className="font-semibold">Jomer Ubaldo</h1>
+            <p className="text-slate-300">Admin</p>
+          </div>
+        </div>
       </div>
       <hr className="text-gray-600" />
 

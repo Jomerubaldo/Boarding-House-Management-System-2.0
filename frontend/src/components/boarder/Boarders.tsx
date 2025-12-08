@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useBoarders } from '../../contexts/BoardersProvider';
 import AddBoarderModal from './AddBoarderModal';
+import { CircleX, Save, SquarePen, Trash2 } from 'lucide-react';
 
 const Boarders = () => {
   const {
@@ -34,10 +35,10 @@ const Boarders = () => {
         {/* Search bar */}
         <input
           type="text"
-          placeholder="Search..."
+          placeholder="Search boarders..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="border py-1 px-2 rounded w-52"
+          className="max-w-52 bg-white px-4 py-2 ring ring-black focus:ring-2 focus:ring-green-500 focus:outline-none rounded"
         />
       </div>
       {/* add overflow-y-auto to create an scroll vertically */}
@@ -93,17 +94,11 @@ const Boarders = () => {
                       <td className="px-6 py-4">{boarder.dateEntered}</td>
                       <td className="px-6 py-4">
                         <div className="flex gap-2">
-                          <button
-                            onClick={handleSaveEdit}
-                            className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 transition"
-                          >
-                            Save
+                          <button onClick={handleSaveEdit}>
+                            <Save stroke="green" size={26} />
                           </button>
-                          <button
-                            onClick={handleCancelEdit}
-                            className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition"
-                          >
-                            Cancel
+                          <button onClick={handleCancelEdit}>
+                            <CircleX stroke="red" size={26} />
                           </button>
                         </div>
                       </td>
@@ -118,17 +113,11 @@ const Boarders = () => {
                       <td className="px-6 py-4">
                         {/* x */}
                         <div className="flex gap-2">
-                          <button
-                            onClick={() => handleEdit(boarder)}
-                            className="bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-600 transition"
-                          >
-                            Edit
+                          <button onClick={() => handleEdit(boarder)}>
+                            <SquarePen stroke="blue" size={26} />
                           </button>
-                          <button
-                            onClick={() => handleDelete(boarder.id)}
-                            className="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600 transition"
-                          >
-                            Delete
+                          <button onClick={() => handleDelete(boarder.id)}>
+                            <Trash2 stroke="red" size={26} />
                           </button>
                         </div>
                       </td>
